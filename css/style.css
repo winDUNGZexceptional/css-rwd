@@ -1,0 +1,305 @@
+* {
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+nav {
+	background-color: lightyellow;
+	height:100%;
+	width: 200px;
+	position: fixed;
+
+}
+
+main {
+	background-color: lightgrey;
+	margin-left: 200px;
+
+}
+
+.banner {
+	background-color: skyblue;
+	height: 700px;
+	position: relative;
+
+
+}
+
+.about {
+	background-color: indianred;
+	/*height: 700px;*/
+/*	background:url(../images/totoro.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	color: white;
+*/
+
+	min-height: 300px;
+
+}
+
+.services {
+	background-color: midnightblue;
+	/*height: 300px;*/
+	min-height: 300px;
+	color: white;
+}
+
+.projects {
+	background-color: crimson;
+	height:300px;
+
+}
+
+.gallery {
+	background-color: orange;
+	/*height: 400px;*/
+	min-height: 400px;
+
+}
+
+footer {
+	background-color: green;
+/*	text-align: center;*/
+	color: white;
+
+}
+
+nav,
+.banner,
+.about,
+.services,
+.projects,
+.gallery,
+footer {
+	padding:30px;
+
+}
+
+.logo {
+	width: 140px;
+	height: 140px;
+	background-color: grey;
+	border: 1px solid white;
+	border-radius: 5px;
+	margin: 0 auto;
+
+}
+
+ul > a > li {
+	list-style: none;
+	border-bottom: 1px solid black;
+	padding:20px;
+	margin-bottom: 2px;
+	text-align: center;
+
+}
+
+ul > a {
+	color: black;
+	text-decoration: none;
+
+}
+
+
+nav > ul {
+
+}
+
+.box {
+	border: 5px solid white;
+	padding: 50px;
+	text-align: center;
+	width: 40%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+}
+
+.box h1 {
+	margin-bottom: 20px;
+} 
+
+.column {
+	border: 1px solid white;
+	color: white;
+	width: 31%;
+	float: left;
+	margin-left: 1%;
+	margin-right: 1%;	
+	margin-bottom: 1%;
+	padding: 20px;
+}
+
+.clear:after {
+	content: "";
+	clear: both;
+	display: block;
+
+}
+
+img[alt*="Service number"] { /* "*" targets all the atrributes that have that "keyword"*/
+	border: 1px solid white;
+	width: 60px;
+	height: 60px;
+	display: block;
+	float: left;
+	margin-right: 10px;
+
+}
+
+img[alt*="Item number"] {
+	border: 1px solid white;
+	height: 60px;
+	width: 60px;
+	display: block;
+	float: left;
+
+}
+
+img[alt*="Service number"] ~ h3 {
+	margin-bottom: 10px;
+}
+
+img[alt*="Service number"] ~ p  {
+	overflow: hidden;
+
+}
+
+
+.gallery > .column {
+	width: 23%;
+
+}
+
+.gallery > .column > p {
+	overflow: hidden;
+}
+
+img[alt*="Item number"] {
+	display:block;
+	margin-right: 10px;
+	width: 100%;
+	height: 120px;
+	margin-bottom: 10px;
+}
+
+img[alt*="Item number"] h3 {
+
+}
+
+img[class*="Social"] {
+	width: 20px;
+	height: 20px;
+	border: 1px solid white;
+	display: block;
+	float: left;
+	margin-right: 10px;
+
+}
+
+div.contact {
+	float: right;
+}
+
+
+
+
+/**************************************/
+
+@media only screen and (max-width: 400px) {
+
+	nav
+	 {
+		position:relative;
+		height: 700px;
+		width: 100%;
+	}
+
+	main {
+		margin: 0;
+	}
+
+	.banner .box {
+		width: 70%;
+	}
+
+	.services .column {
+		float: none;
+		width: 100%;
+	}
+
+	.gallery .column {
+		float: none;
+		width: 100%;
+	}
+
+	footer {
+		text-align: center;
+		position: relative;
+	}
+
+	footer .contact {
+		min-width: 50%;
+		float:none;
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		transform: translateX(-25%);
+	}
+
+}
+
+@media only screen and (min-width: 401px) and (max-width: 550px) {
+
+	.box {
+		width: 80%;
+	}
+
+	nav {
+		width: 140px;
+	}
+
+	main {
+		margin-left: 140px;
+	}
+
+	.logo {
+		height: 100px;
+		width: 100px;
+	}
+
+	.services .column {
+		float: left;
+		width: 100%;
+	}
+
+	.gallery .column {
+		float: left;
+		width: 48%;
+	}
+
+}
+
+@media only screen and (min-width: 551px) and (max-width: 960px) {
+
+	.box {
+		width: 60%;
+	}
+
+
+	.services .column {
+		float: left;
+		width: 100%;
+	}
+
+	.gallery .column {
+		float: left;
+		width: 48%;
+	}
+
+}
